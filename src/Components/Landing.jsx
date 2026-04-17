@@ -20,7 +20,7 @@ const Landing = () => {
                     Fast, secure, and real-time messaging app built with modern web technologies.
                 </p>
 
-                <button className="cursor-pointer mt-6 bg-emerald-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-emerald-600 transition">
+                <button className=" cursor-pointer mt-6 bg-emerald-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-emerald-600 transition">
                     Get Started
                 </button>
             </section>
@@ -32,9 +32,9 @@ const Landing = () => {
             </section>
 
 
-            <section className="text-center py-10 rounded-tl-[100px] rounded-br-[100px] bg-emerald-500 text-white">
+            <section className="text-center py-10 rounded-tl-[50px] rounded-br-[50px] bg-emerald-500 text-white">
                 <h2 className="text-3xl font-bold">Start chatting now</h2>
-                <button className="cursor-pointer mt-4 bg-white text-emerald-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                <button className="animate-bounce cursor-pointer mt-4 bg-white text-emerald-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
                     Join Now
                 </button>
             </section>
