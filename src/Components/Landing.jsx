@@ -4,7 +4,7 @@ const Landing = () => {
     return (
         <div className="min-h-screen bg-amber-50 flex flex-col">
             <nav className="flex justify-between items-center px-8 py-5">
-                <h1 className="text-emerald-500 text-2xl font-bold">WhatsApp</h1>
+                <h1 className="text-emerald-500 text-3xl font-bold">WhatsApp</h1>
 
                 <button className="bg-emerald-500 cursor-pointer text-white px-5 py-2 rounded-lg hover:bg-emerald-600 transition">
                     Login
@@ -13,7 +13,7 @@ const Landing = () => {
 
             <section className="flex flex-col items-center justify-center text-center flex-1 px-6">
                 <h1 className="text-5xl font-bold text-gray-800">
-                    Chat in Real-Time
+                    Chat in Real Time
                 </h1>
 
                 <p className="mt-4 text-gray-600 max-w-xl">
