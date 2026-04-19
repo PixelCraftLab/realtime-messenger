@@ -4,9 +4,12 @@ import { Route, Routes } from 'react-router-dom'
 import Login from './Components/Login'
 import Register from './Components/Register'
 
+
+
 const App = () => {
   return (
     <div>
+
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path="/Login" element={<Login />} />
