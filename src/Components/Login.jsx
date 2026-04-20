@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function Login() {
+export function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-amber-50 px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
@@ -38,25 +39,25 @@ export default function Login() {
 
 
           <div className="flex items-center justify-between text-sm">
-            
+
             <a href="/Register" className="text-green-600 hover:underline">
               Forgot password?
             </a>
           </div>
-          <a >
+          <Link to="/PersonalDashBoard">
             <button
 
               type="submit"
-              className="w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700 transition"
+              className="cursor-pointer w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700 transition"
             >
               Sign In
             </button>
-          </a>
+          </Link>
         </form>
 
         <p className="text-center text-sm text-gray-500 mt-6">
           Don’t have an account?
-          <a href="/Register" className="text-green-600 hover:underline">
+          <a href="/Register" className="text-green-600 cursor-pointer hover:underline">
             Sign up
           </a>
         </p>
@@ -64,3 +65,5 @@ export default function Login() {
     </div>
   );
 }
+
+export default Login;
