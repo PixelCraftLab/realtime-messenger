@@ -4,16 +4,16 @@ export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-amber-50 px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
-        
+
         <h2 className="text-3xl font-bold text-center text-gray-800">
           Login
         </h2>
         <p className="text-center text-gray-500 mt-2">
-          Welcome back 
+          Welcome back
         </p>
 
         <form className="mt-6 space-y-5">
-          
+
           <div>
             <label className="block text-sm font-medium text-gray-700">
               Email
@@ -38,26 +38,25 @@ export default function Login() {
 
 
           <div className="flex items-center justify-between text-sm">
-            <label className="flex items-center gap-2">
-              <input type="checkbox" className="accent-green-600" />
-              Remember me
-            </label>
-            <a href="#" className="text-green-600 hover:underline">
+            
+            <a href="/Register" className="text-green-600 hover:underline">
               Forgot password?
             </a>
           </div>
+          <a >
+            <button
 
-          <button
-            type="submit"
-            className="w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700 transition"
-          >
-            Sign In
-          </button>
+              type="submit"
+              className="w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700 transition"
+            >
+              Sign In
+            </button>
+          </a>
         </form>
 
         <p className="text-center text-sm text-gray-500 mt-6">
-          Don’t have an account?{" "}
-          <a href="#" className="text-green-600 hover:underline">
+          Don’t have an account?
+          <a href="/Register" className="text-green-600 hover:underline">
             Sign up
           </a>
         </p>
