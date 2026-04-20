@@ -51,7 +51,7 @@ export default function Login() {
 
         <p className="text-center text-sm text-gray-500 mt-6">
           Now Login:
-          <a href="/Register" className="text-green-600 hover:underline">
+          <a href="/Login" className="text-green-600 hover:underline">
             Login
           </a>
         </p>
