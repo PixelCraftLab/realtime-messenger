@@ -57,7 +57,7 @@ const Landing = () => {
                     gravity={0.2}
                     friction={0.9975}
                     wallBounce={0.95}
-                    followCursor={false}
+                    followCursor={true}
                 />
             </div>
 
