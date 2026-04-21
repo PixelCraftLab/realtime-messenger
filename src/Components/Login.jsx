@@ -1,14 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Ballpit from "./Ballpit";
 
 export function Login() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-amber-50 px-4">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
+    <div className="relative min-h-screen flex items-center justify-center bg-amber-50">
+
+      <div className="absolute inset-0 z-10">
+        <Ballpit className="w-full h-full" />
+      </div>
+      <div className="w-full max-w-[50%] bg-white/90 backdrop-blur-md rounded-2xl shadow-lg p-8 z-10">
 
         <h2 className="text-3xl font-bold text-center text-gray-800">
           Login
         </h2>
+
         <p className="text-center text-gray-500 mt-2">
           Welcome back
         </p>
@@ -21,8 +27,7 @@ export function Login() {
             </label>
             <input
               type="email"
-              placeholder="you@example.com"
-              className="w-full mt-1 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full mt-1 px-4 py-2 border rounded"
             />
           </div>
 
@@ -32,35 +37,28 @@ export function Login() {
             </label>
             <input
               type="password"
-              placeholder="••••••••"
-              className="w-full mt-1 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full mt-1 px-4 py-2 border rounded"
             />
           </div>
 
-
-          <div className="flex items-center justify-between text-sm">
-
-            <a href="/Register" className="text-green-600 hover:underline">
-              Forgot password?
-            </a>
-          </div>
           <Link to="/PersonalDashBoard">
             <button
-
-              type="submit"
-              className="cursor-pointer w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700 transition"
+              type="button"
+              className="w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700 transition"
             >
               Sign In
             </button>
           </Link>
+
         </form>
 
-        <p className="text-center text-sm text-gray-500 mt-6">
+        <p className="text-center text-gray-500 mt-6">
           Don’t have an account?
-          <a href="/Register" className="text-green-600 cursor-pointer hover:underline">
+          <Link to="/Register" className="text-green-600 cursor-pointer">
             Sign up
-          </a>
+          </Link>
         </p>
+
       </div>
     </div>
   );

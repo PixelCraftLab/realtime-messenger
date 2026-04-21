@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
@@ -37,16 +38,16 @@ export default function Login() {
           </div>
 
 
-          
-          <a >
-            <button
 
+          <Link to="/Login">
+            <button
+              
               type="submit"
               className="w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700 transition"
             >
               Register
             </button>
-          </a>
+          </Link>
         </form>
 
         <p className="text-center text-sm text-gray-500 mt-6">
