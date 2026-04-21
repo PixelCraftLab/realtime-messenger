@@ -1,5 +1,7 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
+import BlurText from "./BlurText";
+
 
 const Landing = () => {
     return (
@@ -22,39 +24,40 @@ const Landing = () => {
 
                 <p
 
-                    className="mt-4 text-gray-600 max-w-xl">
+                    className=" mt-4 text-gray-600">
                     Fast, secure, and real-time messaging app built with modern web technologies.
                 </p>
                 <a
                     href="/Register"
                 >
-                    <button className=" cursor-pointer mt-6 bg-emerald-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-emerald-600 transition">
+                    <button className="mt-20 animate-bounce cursor-pointer mt-6 bg-emerald-500 text-white px-6 py-3 rounded-lg text-lg hover:bg-emerald-600 transition">
                         Get Started
                     </button>
                 </a>
             </section>
-            <section className="">
+            
+            {/* <section className="">
                 <p className="m-5">AI-Powered Chat Summarization
                     Automatically summarizes long conversations in group chats, helping users quickly grasp key points without scrolling through extensive message history.
                     Smart Scheduled Messaging with Chatbot Assistance
                     Allows users to compose messages and schedule them to be sent at a specific time, with optional AI assistance to refine or generate the message content.</p>
-            </section>
+            </section> */}
+            <div className="italic  mb-30 mt-10 ml-65 mr-65 text-neutral-500">
+                <BlurText
+                    text="Transforming conversations into clarity with AI-driven summaries and intelligent scheduling that speaks for you—even when you’re offline."
+                    delay={20}
+                    animateBy="letters"
+                    direction="top"
+                    onAnimationComplete={BlurText}
+                    className="text-2xl mb-8"
+                />
+            </div>
 
 
-            <section className="text-center py-10 rounded-tl-[50px] rounded-br-[50px] bg-emerald-500 text-white">
-                <h2 className="text-3xl font-bold">Start chatting now</h2>
-                <a
-                    href="/Register"
-                >
-                    <button className="animate-bounce cursor-pointer mt-4 bg-white text-emerald-500 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-                        Join Now
-                    </button>
-                </a>
-            </section>
 
-            <footer className="text-center py-4 text-gray-500 text-sm">
-                Incredible upgraded version of WhatsApp
-            </footer>
+
+
+            
 
         </div>
     );

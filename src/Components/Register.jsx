@@ -1,16 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Ballpit from "./Ballpit";
 
-export default function Login() {
+export function Register() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-amber-50 px-4">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
+    <div className="relative min-h-screen flex items-center justify-center bg-amber-50">
+
+      {/* <div className="absolute inset-0 z-10">
+        <Ballpit className="w-full h-full" />
+      </div> */}
+      <div className="w-full max-w-[50%] bg-white/90 backdrop-blur-md rounded-2xl shadow-lg p-8 z-10">
 
         <h2 className="text-3xl font-bold text-center text-gray-800">
           Register
         </h2>
+
         <p className="text-center text-gray-500 mt-2">
-          Lets go
+          Lets Goo
         </p>
 
         <form className="mt-6 space-y-5">
@@ -21,8 +27,7 @@ export default function Login() {
             </label>
             <input
               type="email"
-              placeholder="you@example.com"
-              className="w-full mt-1 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full mt-1 px-4 py-2 border rounded"
             />
           </div>
 
@@ -32,31 +37,31 @@ export default function Login() {
             </label>
             <input
               type="password"
-              placeholder="••••••••"
-              className="w-full mt-1 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full mt-1 px-4 py-2 border rounded"
             />
           </div>
 
-
-
           <Link to="/Login">
             <button
-              
-              type="submit"
+              type="button"
               className="w-full bg-green-600 text-white py-2 rounded-xl hover:bg-green-700 transition"
             >
-              Register
+              register
             </button>
           </Link>
+
         </form>
 
-        <p className="text-center text-sm text-gray-500 mt-6">
-          Now Login:
-          <a href="/Login" className="text-green-600 hover:underline">
+        <p className="text-center text-gray-500 mt-6">
+          have an account?
+          <Link to="/Login" className="text-green-600 cursor-pointer">
             Login
-          </a>
+          </Link>
         </p>
+
       </div>
     </div>
   );
 }
+
+export default Register;

@@ -1,15 +1,48 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Ballpit from "./Ballpit";
+import MagicRings from './MagicRings';
+
+
+
+
 
 export function Login() {
-  return (
-    <div className="relative min-h-screen flex items-center justify-center bg-amber-50">
 
-      <div className="absolute inset-0 z-10">
-        <Ballpit className="w-full h-full" />
+  return (
+    <div className=" relative min-h-screen flex items-center justify-center bg-amber-50">
+
+
+      <div style={{ width: '1370px', height: '720px', position: 'relative' }}>
+        <MagicRings
+          color="#e7cc7b"
+          colorTwo="#6366F1"
+          ringCount={6}
+          speed={1}
+          attenuation={10}
+          lineThickness={2}
+          baseRadius={0.35}
+          radiusStep={0.1}
+          scaleRate={0.1}
+          opacity={1}
+          blur={0}
+          noiseAmount={0.1}
+          rotation={0}
+          ringGap={1.5}
+          fadeIn={0.7}
+          fadeOut={0.5}
+          followMouse={false}
+          mouseInfluence={0.2}
+          hoverScale={1.2}
+          parallax={0.05}
+          clickBurst={false}
+        />
       </div>
-      <div className="w-full max-w-[50%] bg-white/90 backdrop-blur-md rounded-2xl shadow-lg p-8 z-10">
+
+      {/* <div className="absolute inset-0 z-0">
+        <Ballpit className="w-full h-full" />
+      </div> */}
+      <div className="absolute w-full max-w-[40%] bg-white/90 backdrop-blur-md rounded-2xl shadow-lg p-8 z-10">
 
         <h2 className="text-3xl font-bold text-center text-gray-800">
           Login
