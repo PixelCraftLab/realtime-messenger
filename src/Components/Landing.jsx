@@ -1,11 +1,12 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 import BlurText from "./BlurText";
+import Ballpit from './Ballpit'
 
 
 const Landing = () => {
     return (
-        <div className="min-h-screen bg-amber-50 flex flex-col">
+        <div className="min-h-screen bg-gradient-to-b from-amber-50  to-amber-400 flex flex-col">
             <nav className="flex justify-between items-center px-8 py-5">
                 <h1 className="text-emerald-500 text-3xl font-bold">WhatsApp</h1>
                 <a
@@ -17,7 +18,7 @@ const Landing = () => {
                 </a>
             </nav>
 
-            <section className="flex flex-col items-center justify-center text-center flex-1 px-6">
+            <section className=" flex flex-col items-center justify-center text-center flex-1 px-6">
                 <h1 className="text-5xl font-bold text-gray-800">
                     Chat in Real Time
                 </h1>
@@ -35,17 +36,12 @@ const Landing = () => {
                     </button>
                 </a>
             </section>
-            
-            {/* <section className="">
-                <p className="m-5">AI-Powered Chat Summarization
-                    Automatically summarizes long conversations in group chats, helping users quickly grasp key points without scrolling through extensive message history.
-                    Smart Scheduled Messaging with Chatbot Assistance
-                    Allows users to compose messages and schedule them to be sent at a specific time, with optional AI assistance to refine or generate the message content.</p>
-            </section> */}
-            <div className="italic  mb-30 mt-10 ml-65 mr-65 text-neutral-500">
+            <div className=" bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full" />
+
+            <div className="absolute italic   mt-100 ml-65 mr-65 text-neutral-500">
                 <BlurText
                     text="Transforming conversations into clarity with AI-driven summaries and intelligent scheduling that speaks for you—even when you’re offline."
-                    delay={20}
+                    delay={40}
                     animateBy="letters"
                     direction="top"
                     onAnimationComplete={BlurText}
@@ -55,9 +51,21 @@ const Landing = () => {
 
 
 
+            <div style={{ position: 'relative', overflow: 'hidden', minHeight: '500px', maxHeight: '500px', width: '100%' }}>
+                <Ballpit
+                    count={100}
+                    gravity={0.2}
+                    friction={0.9975}
+                    wallBounce={0.95}
+                    followCursor={false}
+                />
+            </div>
 
 
-            
+
+
+
+
 
         </div>
     );

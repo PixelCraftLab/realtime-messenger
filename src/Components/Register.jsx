@@ -5,7 +5,7 @@ import MagicRings from "./MagicRings";
 
 export function Register() {
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-amber-50">
+    <div className="relative min-h-screen flex items-center justify-center bg-amber-100">
 
       {/* <div className="absolute inset-0 z-10">
         <Ballpit className="w-full h-full" />
