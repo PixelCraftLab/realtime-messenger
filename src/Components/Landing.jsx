@@ -11,7 +11,7 @@ const Landing = () => {
             <div className="absolute inset-0 z-0 ">
                 <Ribbons
                     baseThickness={19}
-                    colors={["#5227FF", "#edafaf"]}
+                    colors={["#C9A227", "#F9FAFB"]}
                     speedMultiplier={0.51}
                     maxAge={700}
                     enableFade
@@ -19,7 +19,7 @@ const Landing = () => {
                 />
             </div>
 
-            <div className="z-10 min-h-screen bg-gradient-to-b from-amber-50  to-amber-400 flex flex-col">
+            <div className="z-10 min-h-screen bg-gradient-to-b from-amber-50  to-amber-300 flex flex-col">
 
                 <nav className="flex justify-between items-center px-8 py-5">
                     <h1 className="text-emerald-500 text-3xl font-bold">WhatsApp</h1>
