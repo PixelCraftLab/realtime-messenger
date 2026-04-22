@@ -13,7 +13,7 @@ export function Login() {
     <div className=" relative min-h-screen flex items-center justify-center bg-amber-100">
 
 
-      <div style={{ width: '1370px', height: '720px', position: 'relative' }}>
+      <div style={{ width: '1470px', height: '820px', position: 'relative' }}>
         <MagicRings
           color="#e7cc7b"
           colorTwo="#FEF3C7"
