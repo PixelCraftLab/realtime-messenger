@@ -10,7 +10,7 @@ export function Register() {
       {/* <div className="absolute inset-0 z-10">
         <Ballpit className="w-full h-full" />
       </div> */}
-      <div style={{ width: '1470px', height: '820px', position: 'relative' }}>
+      <div style={{ width: '1500px', height: '820px', position: 'relative' }}>
         <MagicRings
           color="#e7cc7b"
           colorTwo="#FEF3C7"
