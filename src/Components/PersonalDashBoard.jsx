@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { FiMessageSquare, FiUsers, FiStar } from "react-icons/fi";
-import { ChatContext } from "../context/ChatContext";
+import { ChatContext } from "../Context/ChatContext";
 const PersonalDashBoard = () => {
   const { messages, scheduled } = useContext(ChatContext);
     const totalMessages = messages.length;

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ChatContext } from "../context/ChatContext";
+import { ChatContext } from "../Context/ChatContext";
 import MessageBubble from "./MessageBubble";
 import TypingIndicator from "./TypingIndicator";
 
