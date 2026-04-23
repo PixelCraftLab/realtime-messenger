@@ -76,5 +76,20 @@ const PersonalDashBoard = () => {
         </div>
 
       </div>
+            <div className="mt-12 backdrop-blur-lg bg-white/10 border border-white/20 p-6 rounded-2xl shadow-xl">
+        <h2 className="text-xl font-semibold mb-2">📊 Message Activity</h2>
+
+        <p className="text-green-400 text-sm mb-2">
+          {getInsight()}
+        </p>
+
+        <p className="text-blue-400 text-sm mb-4">
+          Scheduled Messages: {scheduled.length}
+        </p>
+
+        <div className="h-40 flex items-center justify-center text-gray-400">
+          Chart can be added here
+        </div>
+      </div>
 
 }
