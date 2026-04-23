@@ -1,5 +1,12 @@
 import ChatWindow from "../Components/ChatWindow";
 import MessageInput from "../Components/MessageInput";
+import { useEffect, useRef } from "react";
+
+const bottomRef = useRef();
+
+useEffect(() => {
+  bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+}, [messages]);
 
 
 const ChatPage = () => {
@@ -16,7 +23,9 @@ const ChatPage = () => {
 
       <ChatWindow />
       <MessageInput />
+      <div ref={bottomRef}></div>
     </div>
+    
   );
 };
 
