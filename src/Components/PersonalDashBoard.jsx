@@ -18,4 +18,20 @@ const PersonalDashBoard = () => {
       : Object.keys(freq).reduce((a, b) =>
           freq[a] > freq[b] ? a : b
         );
+    const getInsight = () => {
+    if (!messages.length) return "No activity";
+
+    const hours = messages.map(m =>
+      new Date(`1970-01-01T${m.time}`).getHours()
+    );
+
+    const count = {};
+    hours.forEach(h => count[h] = (count[h] || 0) + 1);
+
+    const peak = Object.keys(count).reduce((a, b) =>
+      count[a] > count[b] ? a : b
+    );
+
+    return `Most active at ${peak}:00`;
+  };
 }
