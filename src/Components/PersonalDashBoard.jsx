@@ -34,4 +34,17 @@ const PersonalDashBoard = () => {
 
     return `Most active at ${peak}:00`;
   };
+    return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black p-6 text-white">
+      
+      <div className="flex justify-between items-center mb-10">
+        <h1 className="text-3xl font-bold tracking-wide">
+          🚀 Personal Dashboard
+        </h1>
+
+        <button className="bg-gradient-to-r from-green-400 to-emerald-600 px-5 py-2 rounded-xl shadow-lg hover:scale-105 transition">
+          Refresh
+        </button>
+      </div>
+      
 }
