@@ -91,5 +91,9 @@ const PersonalDashBoard = () => {
           Chart can be added here
         </div>
       </div>
+          </div>
+  );
+};
 
-}
+export default PersonalDashBoard;
+
