@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import './PersonalDashBoard.css';
 
+// --- Zero-Dependency SVG Icons ---
 const Icons = {
   Search: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>,
   Send: () => <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>,
@@ -15,8 +16,9 @@ const Icons = {
 const getInitial = (name) => name ? name.charAt(0).toUpperCase() : '?';
 
 export default function PersonalDashBoard() {
+  // --- Core State ---
   const [theme, setTheme] = useState('dark');
-  const [activeTab, setActiveTab] = useState('chats');
+  const [activeTab, setActiveTab] = useState('chats'); // 'chats' | 'analytics'
   const [activeChatId, setActiveChatId] = useState(1);
   const [inputText, setInputText] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
@@ -43,6 +45,7 @@ export default function PersonalDashBoard() {
   const activeContact = contacts.find(c => c.id === activeChatId);
   const currentMessages = messages[activeChatId] || [];
 
+  // --- Derived State (Analytics & Smart Features) ---
   const filteredContacts = contacts.filter(c => c.name.toLowerCase().includes(searchQuery.toLowerCase()));
   
   const smartReplies = useMemo(() => {
@@ -65,9 +68,10 @@ export default function PersonalDashBoard() {
         mostActive = { name: contacts.find(c => c.id === parseInt(chatId))?.name || "Unknown", count: msgCount };
       }
     });
-    return { total, mostActive, streak: 12 };
+    return { total, mostActive, streak: 12 }; // Mock 12 day streak
   }, [messages, contacts]);
 
+  // --- Handlers ---
   useEffect(() => {
     if (chatWindowRef.current && activeTab === 'chats') {
       chatWindowRef.current.scrollTop = chatWindowRef.current.scrollHeight;
@@ -102,6 +106,7 @@ export default function PersonalDashBoard() {
     <div className={`theme-wrapper ${theme}`}>
       <div className="app-container">
         
+        {/* ================= LEFT NAV ================= */}
         <div className="side-nav">
           <div className="nav-top">
             <button className={`nav-btn ${activeTab === 'chats' ? 'active' : ''}`} onClick={() => setActiveTab('chats')} title="Chats">
@@ -121,6 +126,7 @@ export default function PersonalDashBoard() {
           </div>
         </div>
 
+        {/* ================= MIDDLE PANEL (LIST OR ANALYTICS) ================= */}
         <div className="middle-panel">
           {activeTab === 'chats' ? (
             <>
@@ -168,6 +174,7 @@ export default function PersonalDashBoard() {
           )}
         </div>
 
+        {/* ================= RIGHT PANEL (MAIN CHAT) ================= */}
         <div className="main-panel">
           <div className="chat-header">
             <div className="header-info">
@@ -193,6 +200,7 @@ export default function PersonalDashBoard() {
             ))}
           </div>
 
+          {/* Smart Replies */}
           {smartReplies.length > 0 && (
             <div className="smart-replies">
               {smartReplies.map((reply, idx) => (
